@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Mc.css">
+    <style>
+        :root{
+            --bg-light:#f5f7fb;
+            --card:#ffffff;
+            --text:#111827;
+            --accent:#4f46e5;
+            --soft:#eef2ff;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:var(--bg-light);
+            color:var(--text);
+            line-height:1.8;
+            font-size:17px;
+        }
+
+        #toggle-dark{display:none;}
+        #toggle-dark:checked ~ section,
+        #toggle-dark:checked ~ table{
+            background:#0f172a;
+            color:#e5e7eb;
+        }
+
+        .toggle-btn{
+            position:fixed;
+            top:20px;
+            right:20px;
+            padding:10px 18px;
+            background:var(--accent);
+            color:#fff;
+            border-radius:25px;
+            cursor:pointer;
+            font-size:14px;
+            box-shadow:0 10px 25px rgba(0, 0, 0, .25);
+        }
+
+        section{
+            max-width:1100px;
+            margin:40px auto;
+            padding:30px;
+            background:var(--card);
+            border-radius:20px;
+            box-shadow:0 20px 45px rgba(0, 0, 0, .08);
+        }
+
+        nav ul{
+            list-style:none;
+            display:flex;
+            flex-wrap:wrap;,
+            justify-content:center;
+            gap:14px;
+        }
+
+        nav a{
+            text-decoration:none;
+            padding:10px;
+            background:var(--soft);
+            border-radius:14px;
+            color:var(--text);
+            font-weight:600;
+            transition:.3s;
+        }
+
+        nav a:hover{
+            background:var(--accent);
+            color:#fff;
+        }
+
+        h1{
+            text-align:center;
+            font-size:36px;
+            font-weight:700;
+            margin-top:30px;
+            color:var(--accent);
+        }
+
+        p{
+            text-align:center;
+            margin:15px auto 40px;
+            max-width:650px;
+            color:#374151;
+        }
+
+        table{
+            width:90%;
+            max-width:900px;
+            margin:0 auto 60px;
+            border-collapse:separate;
+            border-spacing: 0 20px;
+        }
+
+        td{
+            font-size:22px;
+            margin-bottom:8px;
+            color:#1e1b4b;
+        }
+
+        h3{
+            font-size:22px;
+            margin-bottom:8px;
+            color:#1e1b4b;
+        }
+
+        td p{
+            text-align:left;
+            margin:0;
+            color:#4b5563;
+        }
+
+        td a{
+            text-decoration:none;
+            font-weight:600;
+            color:var(--accent);
+        }
+
+        td a:hover{
+            text-decoration:underline;
+        }
+
+        .container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:20px;
+        }
+
+        .glowing-box{
+            width:130px;
+            height:130px;
+            border-radius:22px;
+            background:linear-gradient(135deg,#4f46e5,#22d3ee);
+            box-shadow:0 0 35px rgba(99, 102, 241, .9);
+            animation:pulse 2.5s infinite alternate;
+        }
+
+        @keyframes pulse{
+            from{transform:scale(1);}
+            to{transform:scale(1.08);}
+        }
+
+        .loading-bar{
+            width:100%;
+            max-width:420px;
+            height:14px;
+            background:#e5e7eb;
+            border-radius:20px;
+            overflow:hidden;
+        }
+
+        .progress{
+            height:100%;
+            width:0;
+            background:linear-gradient(90deg, #4f46e5,#22d3ee);
+            animation:load 4s infinite;
+        }
+
+        @keyframes load{
+            0%{width:0;}
+            100%{width:100%;}
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle-dark">
+    <label for="toggle-dark" class="toggle-btn">Toggle Dark Mode</label>
+        <section>
+        <div class="container">
+            <div class="glowing-box"></div>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="C Programming.html">C Programming</a></li>
+                <li><a href="Python.html">Python</a></li>
+                <li><a href="Web development.html">Web development</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Download notes.html">Download Notes</a></li>
+                <li><a href="Tutorials.html">Tutorials</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <h1>My Projects</h1>
+    <p>Here are some of the mini-projects i've built to practice HTML, CSS and Javascript</p>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>
+                <h3>Login Form</h3>
+                <p><a href="form.html">form</a>A simple login form built with HTML.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Flag</h3>
+                <p><a href="The flag.html">Kenyan Flag</a>A Kenyan Flag.</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

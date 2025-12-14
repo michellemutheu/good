@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page3</title>
+    <link rel="stylesheet" href="Mc.css">
+
+    <style>
+
+        :root{
+            --bg-light:#f5f7fb;
+            --text-light:#1f2933;
+            --card-light:#ffffff;
+            --accent:#4f46e5;
+            --accent-soft:#eef2ff;
+
+            --bg-dark:#0f172a;
+            --text-dark:#e5e7eb;
+            --card-dark:#111827;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:var(--bg-light);
+            color:#111827;
+            line-height:1.7;
+        transition:background .4s, color .4s;
+        }
+
+        #toggle-dark{display:none;}
+        #toggle-dark:checked ~ *{
+            background:var(--bg-dark);
+            color:var(--text-dark);
+        }
+        #toggle-dark:checked ~ section,
+        #toggle-dark:checked ~ nav{background:var(--card-dark);
+        }
+        .toggle-btn{
+            position:fixed;
+            top:20px;
+            right:20px;
+            background:var(--accent);
+            color:#fff;
+            padding:10px 18px;
+            border-radius:25px;
+            cursor:pointer;
+            font-size:14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+        }
+
+        section{
+            max-width:1100px;
+            background:var(--card-light);
+            padding:30px;
+            margin:40px auto;
+            border-radius:18px;
+            box-shadow:0 15px 40px rgba(0,0,0,.08);
+            transition:background .4s;
+        }
+
+        nav ul{
+            list-style:none;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:15px;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#f5f7fb;
+            padding:10px 18px;
+            border-radius:12px;
+            font-weight:500;
+            background:var(--accent-soft)
+            transition:.3s;
+        }
+
+        nav a:hover{
+            background:var(--accent);
+            color:#fff;
+        }
+
+        h1, h2{
+            margin-bottom:20px;
+            color:var(--accent);
+        }
+
+        ol>li{
+            margin-top:20px;
+            font-weight:600;
+        }
+
+        ul{
+            margin-top:10px;
+            margin-left:20px;
+        }
+
+        ul li{
+            font-weight:400;
+            margin-bottom:6px;
+        }
+
+        pre{
+            background:#020617;
+            color:#e5e7eb;
+            padding:20px;
+            border-radius:14px;
+            overflow-x:auto;
+            box-shadow:inset 0 0 20px rgba(255, 255, 255, .05);
+        }
+
+        button{
+            padding: 14px 26px;
+            border:none;
+            border-radius:14px;
+            background:linear-gradient(135deg, #4f46e5,#6366f1);
+            color:#fff;
+            font-size:15px;
+            font-weight:600;
+            cursor:pointer;
+            box-shadow:0 15px 30px rgba(79, 70, 229, .4);
+            transition:.3s;
+        }
+
+        button:hover{
+            transform:translateY(-2px);
+            box-shadow:0 20px 45px rgba(79, 70, 229, .6);
+        }
+
+        .container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:20px;
+        }
+
+        .glowing-box{
+            width:140px;
+            height:140px;
+            border-radius:20px;
+            background:linear-gradient(135deg,#4f46e5,#22d3ee);
+            box-shadow:0 0 30px rgba(99, 102, 241, .8);
+            animation:pulse 2.5s infinite alternate;
+        }
+
+        @keyframes pulse{
+            from{transform:scale(1);}
+            to{transform:scale(1.08);}
+        }
+
+        .loading-bar{
+            width:100%;
+            max-width:400px;
+            height:14px;
+            background:#e5e7eb;
+            border-radius:20px;
+            overflow:hidden;
+        }
+
+        .progress{
+            height:100%;
+            width:0%;
+            background:linear-gradient(90deg,#4f46e5,#22d3ee);
+            animation:load 4s infinite;
+        }
+
+        @keyframes load{
+            0%{width:0;}
+            100%{width:100%;}
+        }
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle-dark">
+    <label for="toggle-dark" class="toggle-btn">Toggle Dark Mode</label>
+        <section>
+        <div class="container">
+            <div class="glowing-box"></div>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="C Programming.html">C Programming</a></li>
+                <li><a href="Python.html">Python</a></li>
+                <li><a href="Web development.html">Web development</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Download notes.html">Download Notes</a></li>
+                <li><a href="Tutorials.html">Tutorials</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+            <h1>Topics List</h1>
+    <ol>
+        <li>C BASICS(FOUNDATION)</li>
+        <ul>
+            <li>What is Programming?</li>
+            <li>What is C language?</li>
+            <li>History and uses of c</li>
+            <li>Structure of a C program</li>
+            <li>printf() and scanf()</li>
+            <li>Keywords and Identifiers</li>
+            <li>Variables and Constants</li>
+            <li>Data Types(int, float, char, double)</li>
+            <li>Size of Dta types</li>
+            <li>Type Casting</li>
+            <li>Comments in C</li>
+        </ul>
+        <li>OPERATORS IN C</li>
+        <ul>
+            <li>Arithmetic Operators</li>
+            <li>Relational Operators</li>
+            <li>Logical Operators</li>
+            <li>Assignment Operators</li>
+            <li>Bitwise Operators</li>
+            <li>Increment & Decrement(++, --)</li>
+            <li>Operator Precedence & Associativity</li>
+        </ul>
+        <li>INPUT AND OUTPUT FUNCTIONS</li>
+        <ul>
+            <li>printf()</li>
+            <li>scanf()</li>
+            <li>getchar() and putchar()</li>
+            <li>gets() and puts()</li>
+            <li>Formatted Input and Output</li>
+        </ul>
+        <li>CONTROL FLOW STATEMENTS</li>
+        <ul>
+            <li>If statement</li>
+            <li>If-else statement</li>
+            <li>Nested if-else</li>
+            <li>Switch-case statement</li>
+            <li>Loops: for, while, do-while</li>
+            <li>Break and Continue statements</li>
+        </ul>
+        <li>FUNCTIONS IN C</li>
+        <ul>
+            <li>Defining and Declaring Functions</li>
+            <li>Function Prototypes</li>
+            <li>Function Parameters and Arguments</li>
+            <li>Return Values</li>
+            <li>Recursion</li>
+            <li>Scope of Variables</li>
+        </ul>
+        <li>ARRAYS IN C</li>
+        <ul>
+            <li>Defining and Declaring Arrays</li>
+            <li>Initializing Arrays</li>
+            <li>Accessing Array Elements</li>
+            <li>Multidimensional Arrays</li>
+            <li>Arrays and Functions</li>
+        </ul>
+        <li>POINTERS IN C</li>
+        <ul>
+            <li>Understanding Pointers</li>
+            <li>Pointer Arithmetic</li>
+            <li>Pointers and Arrays</li>
+            <li>Pointers and Functions</li>
+            <li>Dynamic Memory Allocation</li>
+        </ul>
+        <li>STRUCTURES AND UNIONS</li>
+        <ul>
+            <li>Defining Structures</li>
+            <li>Accessing Structure Members</li>
+            <li>Nested Structures</li>
+            <li>Unions in C</li>
+            <li>Structures and Functions</li>
+        </ul>
+        <li>FILE HANDLING IN C</li>
+        <ul>
+            <li>File Operations: fopen, fclose</li>
+            <li>Reading from Files</li>
+            <li>Writing to Files</li>
+            <li>File Modes</li>
+            <li>Error Handling in File Operations</li>
+        </ul>
+    </ol>
+    </section>
+
+    <section>
+        <h2>Example Programs</h2>
+        <ul>
+            <li>Simple Calculator</li>
+            <li>Factorial of a Number</li>
+            <li>Fibonacci Series</li>
+            <li>Prime Number Checker</li>
+            <li>Array Sorting (Bubble Sort)</li>
+            <li>String Reversal</li>
+            <li>File Copy Program</li>
+        </ul>
+    </section>
+
+    
+    <section>
+        <h2>C Program</h2>
+        <pre><code>
+            #include <stdio.h>
+            int main() {
+                printf("Hello, World!\n");
+                return 0;
+            }
+        </code></pre>
+        <h2>Output Preview</h2>
+        <pre><code>
+            Hello World!
+        </code></pre>
+    </section>
+
+    <section>
+        <div>
+            <a href="c_language_basics.pdf">
+            <button>c pdf</button>
+        </div>
+    </section>
+     
+    <br>
+    
+    <section>
+        <div>
+            <a href="c_sample_questions.pdf">
+            <button>c Sample Questions pdf</button>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page9</title>
+    <link rel="stylesheet" href="Mc.css">
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:"Segoe UI", Inter Arial, sans-serif;
+            background:#f4f6fb;
+            color:#1a1a1a;
+            line-height:1.8;
+        }
+
+        #toggle-dark{
+            display:none;
+        }
+
+        #toggle-dark:checked ~ * {
+            background-color:#0e1117;
+            color:#e6e6e6;
+        }
+
+        .toggle-btn{
+            display:inline-block;
+            margin:20px;
+            padding:10px 22px;
+            background:linear-gradient(135deg,#00f5ff,#5b7cff);
+            color:#000;
+            border-radius:30px;
+            font-weight:600;
+            cursor:pointer;
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+
+        }
+
+        .container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:25px;
+            padding:40px 0;
+        }
+
+        .glowing-box{
+            width:120px;
+            height:120px;
+            border-radius:18px;
+            background:linear-gradient(135deg, #00f5ff, #5b7cff);
+            box-shadow: 0 0 40px rgba(0, 245, 255, 0.8);
+            animation:pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse{
+            from{ transfrom: scale(i); }
+            to{ transform: scale(1.08); }
+        }
+
+        .loading-bar{
+            width:300px;
+            height:14px;
+            background:#e0e0e0;
+            border-radius:50px;
+            overflow:hidden;
+        }
+
+        .progress{
+            height:100%;
+            width:60%;
+            background:linear-gradient(90deg, #00f5ff, #5b7cff);
+        }
+
+        nav{
+            background:#111827;
+            padding:16px;
+            border-radius:16px;
+        }
+
+        nav ul{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            gap: 14px;
+            list-style:none;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:#e5e7eb;
+            padding: 8px 14px;
+            border-radius:8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover{
+            background:linear-gradient(135deg, #00f5ff, #5b7cff);
+            color:#000;
+        }
+
+        header{
+            max-width:1000px;
+            margin:60px auto 30px;
+            padding:0 20px;
+        }
+
+        header h1{
+            font-size:42px;
+            font-weight:800;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        header p{
+            font-size: 20px;
+            color:#555;
+        }
+
+        main{
+            max-width:1000px;
+            margin:auto;
+            padding: 0 20px 80px;
+        }
+
+        article section{
+            background: #ffffff;
+            margin-bottom: 40px;
+            padding:35px;
+            border-radius: 22px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        h2{
+            font-size:30px;
+            margin-bottom:15px;
+            color:#1f2937;
+        }
+
+        h3{
+            font-size:20px;
+            margin:20px 0 10px;
+            color: #374151;
+        }
+
+        p{
+            font-size:18px;
+            margin-bottom:15px;
+            color:#444;
+        }
+
+        ul{
+            margin-left:20px;
+            margin-bottom:15px;
+        }
+
+        ul li{
+            font-size:17px;
+            margin-bottom: 8px;
+        }
+
+        article section:hover{
+            transform: translateY(-4px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="toggle-dark">
+    <label for="toggle-dark" class="toggle-btn">Toggle Dark Mode</label>
+        <section>
+        <div class="container">
+            <div class="glowing-box"></div>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="C Programming.html">C Programming</a></li>
+                <li><a href="Python.html">Python</a></li>
+                <li><a href="Web development.html">Web development</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Download notes.html">Download Notes</a></li>
+                <li><a href="Tutorials.html">Tutorials</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <header>
+        <h1>Top 5 Programming Languages in 2025: The Technologies Shaping the Future</h1>
+        <p>The world of software development continues to evolve rapidly, and 2025 has brought
+            new trends, tools and priorities. While many languages remain popular, the rise of AI, automatin, cloud computing and cross-platform development has shifted While%20learning%20the%20basics%20oflanguages dominate the industry. Below are the top 5 programmin languages in 2025, 
+            along with why they are so influential today.
+        </p>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>Python - Still the King of AI and Simplicity</h2>
+                <p>Python continues to be the worlds mist widely used programming language in 2025. industryreadibility, huge community, and unmatched ecosystem for artificial intelligence keep it ahead of the compettion.</p>
+                <h3>Why Python remains on top:</h3>
+                <ul>
+                    <li>Unbeatable for Machine Learning and Data Science(TensorFlow, PyTorch).</li>
+                    <li>Perfect for automation scripts and backend development.</li>
+                    <li>Massive community support.</li>
+                    <li>Easy to learn for beginners but powerful for experts.</li>
+
+                </ul>
+                <p>Where its used: A, automation, backend development, cybersecurity, data analysis.</p>
+            </section>
+
+            <section>
+                <h2>Javascript - The Heart of the Web</h2>
+                <p>Javascript continues to dominate front-end and full-stack development. With frameworks
+                    like React, Vue and Svelte and server-side Javascript throug Node.js, it remains essential.
+                </p>
+                <h3>Why Javascript remains powerful:</h3>
+                <ul>
+                    <li>Runs on every browser.</li>
+                    <li>Full-stack capability due to Node.js.</li>
+                    <li>Large ecosystem and continuous innovation.</li>
+                    <li>Excellent for interactive UI and modern web apps.</li>
+                </ul>
+                <p>Where its used: Web apps, mobile apps(React Native), backend services, cloud functions.</p>
+            </section>
+
+            <section>
+                <h2>Rust - The Fastest Rising Star</h2>
+                <p>By 2025, Rust has transitioned from a niche systems language to a mainstream contender.
+                    Its focus on safety, performance and memory efficieny maks it a favorite for high 
+                    performance and secure software.
+                </p>
+                <h3>Why Rust is booming:</h3>
+                <ul>
+                    <li>Memory-safe without a garbage collector.</li>
+                    <li>Used by major companies like Microsoft, Google, Amazon and Meta.</li>
+                    <li>Ideal for cybersecurity and low-level systems.</li>
+                    <li>Excellent for building fast, reliable applications.</li>
+                </ul>
+                <p>Where its used: System software, game engines, browsers, embedded devices, blockchain.</p>
+            </section>
+
+            <section>
+                <h2>Go (Golang) - The Cloud and Backend Chamiopn</h2>
+                <p>Googles Go language remains one of the strongest options for cloud-native development.
+                    Its simplicity and performance make it ideal for microservices, distributed systems and backend APIs.
+                </p>
+                <h3>Why Go is a top pick in 2025:</h3>
+                <ul>
+                    <li>Extremely fast compile times.</li>
+                    <li>Designed for concurrency(perfect for large systems).</li>
+                    <li>Minimalistic and easy to learn.</li>
+                    <li>Dominates cloud computing and DevOps tools.</li>
+                </ul>
+                <p>Where its used: Cloud services, Kubernetse tools, web servers, DevOps, distributed applications.</p>
+            </section>
+
+            <section>
+                <h2>Java - The Everlasting Enterprise Giant</h2>
+                <p>Even in 2025, Java still powers millions of enterprise applicatins. It remains stable, secure,
+                    and scalable. With new features added regulary, it continues to evolve.
+                </p>
+                <h3>Why Java remains relevant:</h3>
+                <ul>
+                    <li>Trusted in banking, government and large-scale enterprise systems.</li>
+                    <li>Excellent performance with the JVM.</li>
+                    <li>Huge ecosystem (Spring Boot, Jakarta EE).</li>
+                    <li>Strong job demand worldwide.</li>
+                </ul>
+                <p>Where its used: Enterprise apps, Android development, large financial systems.</p>
+            </section>
+        </article>
+    </main>
+
+    <header>
+        <h1>Why Every Student Should Learn Python</h1>
+        <p>In todays digital world, technology shapes almost every career, industry and form of communication
+            . Whether a stdent wants to become a doctor, engineer, teacher,
+            programmer, or entreneur, one skill stands out as universally valuable: Pythonprogramming. Python has grown into one of the most importatnt languages in education
+            and the professional world, and there are many strong reasons why every student Shouldlearn it.
+        </p>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>Python Is Extremely Easy to Learn</h2>
+                <p>Python was designed to be simple, readable and beginner-friendly. Its syntax looks almostlike plain English, which makes it easy for students especially those new to programming to understand how code works.</p>
+            </section>
+
+            <section>
+                <h2>Python Builds Problem Solving Skills</h2>
+                <p>Learning Python helps students think logically. They learn how to break down a big
+                    problem into smaller, manageable steps and find efficient solutions. These problem
+                    solving skills are usefu;l not in programming but also in mathematics, science and
+                    everyday decision-making.
+                </p>
+            </section>
+
+            <section>
+                <h2>Python Is the Language of the Future (AI, Data Science, Automation)</h2>
+                <p>Python is the leading language in:</p>
+                <ul>
+                    <li>Artificial intelligence</li>
+                    <li>Machine Learning</li>
+                    <li>Data Science</li>
+                    <li>CYbersecurity</li>
+                    <li>Automation</li>
+                    <li>Robotics</li>
+                    <li>Web Development</li>
+                </ul>
+                <p>Students who learn Python gain access to fields that are sha[ig the future. Evene basic
+                    knowledge gives them a huge advantage.
+                </p>
+            </section>
+
+            <section>
+                <h2>Python Is Used Everywhere</h2>
+                <p>Python isnt just for tech companies. Its used in:</p>
+                <ul>
+                    <li>Banks and finacial institutions</li>
+                    <li>Hospitals and medical research</li>
+                    <li>Government systems</li>
+                    <li>Universities</li>
+                    <li>Startups</li>
+                    <li>Mobile and web applications</li>
+                    <li>Scientific research</li>
+                    <li>Entertainment(games, animations, media)</li>
+                </ul>
+                <p>Because it is so widespread, students who know Python can explore almost any industry.</p>
+            </section>
+
+            <section>
+                <h2>Python Encourages Craetivity</h2>
+                <p>From building simple games and apps to creating chatbots, visual projects and websites,
+                    Python sparks creativity. Students can:
+                </p>
+                <ul>
+                    <li>Create their own programs</li>
+                    <li>Automate tasks</li>
+                    <li>Analyze data</li>
+                    <li>Build school projects</li>
+                    <li>Experimant with AI models</li>
+                </ul>
+                <p>It transforms learning into a fun, hands-on experience.</p>
+            </section>
+
+            <section>
+                <h2>Python Opens Career Opportunities Early</h2>
+                <p>Tech companies, research labs, universities and businesses all seek people who know
+                    Python. For students, learning Python early means:
+                </p>
+                <ul>
+                    <li>Better internship oppurtunies</li>
+                    <li>Stronger resumes</li>
+                    <li>Easier entry into tech careers</li>
+                    <li>Freelance opportunities</li>
+                    <li>Ability to build their own projects or startups</li>
+                </ul>
+                <p>Python knowledge adds real-world value long before graduation.</p>
+            </section>
+
+            <section>
+                <h2>Python Supports Academic Success</h2>
+                <p>Python is commonly used in:</p>
+                <ul>
+                    <li>Computer science coureses</li>
+                    <li>Mathematics and statistics</li>
+                    <li>Engineering assignments</li>
+                    <li>Science experiments</li>
+                    <li>Research projects</li>
+                </ul>
+                <p>Students who know Python can complete academic tasks faster and more effectively.</p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
